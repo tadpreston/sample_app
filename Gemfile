@@ -10,6 +10,8 @@ group :development, :test do
   gem 'guard-rspec', '0.5.5'
 end
 
+gem 'annotate', '2.5.0', group: :development
+
 
 # Gems used only for assets and not required
 # in production environments by default.
