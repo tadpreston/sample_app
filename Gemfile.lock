@@ -188,7 +188,6 @@ DEPENDENCIES
   guard-rspec (= 0.5.5)
   guard-spork (= 0.3.2)
   jquery-rails (= 2.0.2)
-  libnotify (= 0.5.9)
   minitest (= 3.3.0)
   pg (= 0.12.2)
   rails (= 3.2.7)
