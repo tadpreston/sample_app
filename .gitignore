@@ -15,4 +15,8 @@
 /tmp
 
 # Ignore additional files
+doc/
 *.swp
+*~
+.DS_Store
+bundler_stubs/
