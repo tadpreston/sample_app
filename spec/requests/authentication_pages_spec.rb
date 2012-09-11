@@ -103,6 +103,11 @@ describe "AuthenticationPages" do
           end
         end
 
+        describe "when visiting the home page" do
+          before { visit root_url }
+          it { should_not have_link("Profile") }
+          it { should_not have_link("Settings") }
+        end
       end
 
       describe "as wrong user" do
