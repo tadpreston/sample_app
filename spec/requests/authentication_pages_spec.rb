@@ -103,11 +103,29 @@ describe "AuthenticationPages" do
           end
         end
 
-        describe "when visiting the home page" do
-          before { visit root_url }
-          it { should_not have_link("Profile") }
-          it { should_not have_link("Settings") }
+        describe "in the Microposts controller" do
+
+          describe "submitting to the create action" do
+            before { post microposts_path }
+            specify { response.should redirect_to(signin_path) }
+          end
+
+          describe "submitting to the destroy action" do
+            before { delete micropost_path(FactoryGirl.create(:micropost)) }
+            specify { response.should redirect_to(signin_path) }
+          end
         end
+
+        describe "in the static_pages controller" do
+
+          describe "when visiting the home page" do
+            before { visit root_url }
+            it { should_not have_link("Profile") }
+            it { should_not have_link("Settings") }
+          end
+
+        end
+        
       end
 
       describe "as wrong user" do
